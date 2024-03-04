@@ -42,25 +42,38 @@
     gap: 10px;
     background-color: #4F77FF;
     border-radius: 140px 140px  0 0;
+    overflow: hidden;
 }
 
 .stair {
+    background-color: blue;
     height: 50px;
-    background-color: #191919;
+    animation: stair 1s linear .5s forwards;
 }
 
-.stair-1 {
+.stair:nth-child(1) {
     width: 100px;
+    transform: translateX(100px);
 }
 
-.stair-2 {
+.stair:nth-child(2) {
     width: 150px;
+    transform: translateX(-300px);
 }
 
 .stair-3 {
     width: 200px;
+    transform: translateX(200px);
 }
 
 .stair-4 {
     width: 250px;
+    transform: translateX(-300px);
+}
+
+@keyframes stair {
+    to {
+        transform: translateX(0);
+        background-color: #191919;
+    }
 }

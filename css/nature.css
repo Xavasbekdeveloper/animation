@@ -46,28 +46,50 @@
 .sun {
     position: absolute;
     bottom: 120px;
+    top: -100px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background-color: #FFF58F;
+    animation: sun 1s linear .4s forwards;
 }
 
 .nature-left {
     position: absolute;
     bottom: -50px;
-    left: -70px;
+    left: -250px;
     width: 250px;
     height: 250px;
     background-color: #E08027;
     border-radius: 0 65% 0 0;
+    animation: nature 1s linear .4s forwards;
 }
 
 .nature-right {
     position: absolute;
     bottom: -50px;
-    right: -70px;
+    right: -250px;
     width: 250px;
     height: 250px;
     background-color: #824B20;
     border-radius: 65% 0 0 0;
+    animation: nature-right 1s linear .4s forwards;
+}
+
+@keyframes sun {
+    to {
+        top: 190px;
+    }
+}
+
+@keyframes nature {
+    to {
+        left: -70px;
+    }
+}
+
+@keyframes nature-right {
+    to {
+        right: -70px;
+    }
 }
